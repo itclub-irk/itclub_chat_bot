@@ -29,9 +29,12 @@
 
   (mount/stop)
 
+  (tap> 1)
+
   (try
     ;(cfg/validate-config (cfg/env-config))
-    (get-me (-> cfg/config :telegram-apikey))
+    (tap>
+     (get-me {:apikey (-> cfg/config :telegram-apikey)}))
     (catch Exception ex ex)
     )
   ;;=> {:can_connect_to_business false,

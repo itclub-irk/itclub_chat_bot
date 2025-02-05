@@ -1,13 +1,13 @@
 (ns itbot.app.dispatch
-  (:require
-   [meteobot.app.inbound :as in]
+  #_(:require
+   [itbot.app.inbound :as in]
    ))
 
 
 (def PRIVATE_HANDLERS_MAP 
   {
-   :message #'in/message
-   :callback_query #'in/callback
+   ;:message #'in/message
+   ;:callback_query #'in/callback
    })
 
 
@@ -31,5 +31,5 @@
         handler (handler-by-type update-type chat-type)]
     (if handler
       (handler ctx data)
-      (in/unhandled ctx upd)
+      nil #_(in/unhandled ctx upd)
       ,)))

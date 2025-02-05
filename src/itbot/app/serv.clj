@@ -3,7 +3,7 @@
    [taoensso.telemere :refer [log!]]
    [mount.core :refer [defstate args]]
    [mlib.telegram.botapi  :refer [get-me get-updates LONG_POLLING_TIMEOUT]]
-   [meteobot.app.dispatch :refer [router]]
+   [itbot.app.dispatch :refer [router]]
    ,))
 
 
