@@ -1,3 +1,3 @@
-# IT CLub chat bot
+# IT Club chat bot
 
 ?TBD?
